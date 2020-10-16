@@ -1,12 +1,12 @@
 # Mir Random
 
-Advanced random number generators.
+.لإنشاء أعداد عشوائية بشكل متقدم 
 
 ## Links
 
- - [API Documentation](http://mir-random.libmir.org)
+ - [مستند الواجهة البرمجية](http://mir-random.libmir.org)
  - [GitHub](https://github.com/libmir/mir-random)
- - [Mir Algorithm Documentation](http://mir-algorithm.libmir.org)
+ - [Mir Algorithm مستند](http://mir-algorithm.libmir.org)
 
 ## {SourceCode}
 
@@ -24,7 +24,7 @@ void main()
     auto sample = normalVar.randomSlice(10);
     writeln(sample);
 
-    // prints random element from the sample
+    // sample تطبع رقم عشوائي من
     writeln(sample[$.randIndex]);
 }
 ```
