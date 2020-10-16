@@ -1,19 +1,21 @@
 # Lubeck
 
-High level linear algebra library based on CBLAS, LAPACK and Mir Algorithm.
+.Mir و خوارزمية ,LAPACK ,CBLAS مكتبة جبر خطية عالية المستوى مبنية على
 
-## Dependencies
-Lubeck depends on CBLAS and LAPACK API. You may need to install them and update `dub.sdl`.
-CBLAS and LAPACK are preinstalled on MacOS.
-[OpenBLAS](http://www.openblas.net) or [Intel MKL](https://software.intel.com/en-us/mkl)
-backends are recommeded for Linux and Windows.
+## التبعيات
 
-## Links
+.`dub.sdl` ربما عليك تثبيتهم و من ثم تحديث ,LAPACK و الواجهة البرمجية ل CBLASل Lubeck تتبع
+
+.MacOS مثبتون مسبقاً على LAPACK و CBLAS
+
+.Windows و Linuxموصى بهم ل [Intel MKL](https://software.intel.com/en-us/mkl) أو [OpenBLAS](http://www.openblas.net) طرفيات
+
+## الروابط
 
  - [GitHub](https://github.com/kaleidicassociates/lubeck)
- - [Mir Algorithm API](http://mir-algorithm.libmir.org)
- - [Mir Random API](http://mir-random.libmir.org)
- - [Mir API](http://mir.libmir.org)
+ - [Mir الواحهة البرمجية لخوارزمية](http://mir-algorithm.libmir.org)
+ - [Mir الواجهة البرمجة للعشوائيات في](http://mir-random.libmir.org)
+ - [البرمجية Mir واجهة](http://mir.libmir.org)
 
 ## {SourceCode:incomplete}
 
@@ -30,11 +32,11 @@ import std.stdio: writeln;
 void main()
 {
     auto n = 5;
-    // Magic Square
+    // المربع السحري
     auto matrix = n.magic.as!double.slice;
     // [1 1 1 1 1]
     auto vec = 1.repeat(n).as!double.slice;
-    // Uses CBLAS for multiplication
+    // لعملية الضرب CBLAS استخدم
     matrix.mtimes(vec).writeln;
     "-----".writeln;
     matrix.mtimes(matrix).byDim!0.each!writeln;
