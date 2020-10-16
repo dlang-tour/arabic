@@ -1,44 +1,40 @@
-# Run D program locally
+# داخياً D تشغيل برنامج 
 
-D comes with a compiler `dmd`, a script-like run tool `rdmd` and
-a package manager `dub`.
+.`dub` و منظم حزم `rdmd` و أداة لتشغيل ما يشبه السكربتات `dmd` مع مترجم  D تأتي لغة
 
-### DMD Compiler
+### DMD مترجم
 
-The *DMD* compiler compiles D file(s) and creates a binary.
-On the command line *DMD* can be invoked with the filename:
+.يترجم ملف (أو عدة ملفات) و ينشأ برنامج تنفيذي DMD مترجم لغة 
+
+:مع اسم الملف DMD في مواجه الأوامر يمكن استخدام
 
     dmd hello.d
 
-There are many options that allow you to modify the behavior of the *DMD* compiler.
-Browse the [online documentation](https://dlang.org/dmd.html#switches) or run `dmd --help` for an overview of available flags.
+.(سلوكه) DMD هناك العديد من الخيارات التي تسمح لك بتعديل كيفية عمل مترجم
 
-### On-the-fly compilation with `rdmd`
+### `rdmd` الترجمة المباشرة بواسطة
 
-The helper tool `rdmd`, distributed with the DMD compiler,
-will make sure to compile all dependencies and automatically runs
-the resulting application:
+:ستتأكد من ترجمة التبعيات و مباشرةً تشغل التطبيق الناتج DMD التي توزع مع مترجم ,`rdmd` الأداة المساعدة 
 
     rdmd hello.d
 
-On UNIX systems the shebang line `#!/usr/bin/env rdmd` can be put
-on the first line of an executable D file to allow a script-like
-usage.
+,Unix على أنظمة
 
-Browse the [online documentation](https://dlang.org/rdmd.html) or run `rdmd --help` for an overview of available flags.
+.لتسمح بتشغيل شيء بواسطة ما يشبه سكربت D على السطر الأول في البرنامج التنفيذي لملف `#!/usr/bin/env rdmd` shebang يمكن وضع خط 
 
-### Package manager `dub`
+.لإلقاء نظرة على الخيارات (الأعلام) المتاحة `rdmd --help` تصفح [المستند المتوفر على الإنترنت](https://dlang.org/rdmd.html#switches) أو نفذ الأمر 
 
-D's standard package manager is [`dub`](http://code.dlang.org). When `dub` is
-installed locally, a new project `hello` can be created using
-the command line:
+### `dub` منظم الحزم
+
+.[`dub`](http://code.dlang.org) الرئيسي يسمى D منظم حزم لغة
+
+:بإستخدام موجه الأوامر `hello` بشكل داخلي, يمكن إنشاء مشروع بإسم مثلاً `dub` عندما يتم تنصيب 
 
     dub init hello
 
-Running `dub` inside this folder will fetch all dependencies, compile the
-application and run it.
-`dub build` will compile the project.
+.داخل مجلد سيحمل التبعيات و يترجم التطبيق و يشغله `dub` تشغيل
+.سيترجم المشروع `dub build` الأمر
 
-Browse the [online documentation](https://code.dlang.org/docs/commandline) or run `dub help` for an overview of available commands and features.
+.لإلقاء نظرة على الأوامر و الميزات المتاحة `rdmd --help` تصفح [المستند المتوفر على الإنترنت](https://code.dlang.org/docs/commandline) أو نفذ الأمر
 
-All available dub packages can be browsed through dub's [web interface](https://code.dlang.org).
+.المتاحة عن طريق واجهة الويب الخاصة به من [هنا](https://code.dlang.org) dub يمكن تصفح جميع حزم
