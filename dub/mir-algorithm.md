@@ -30,7 +30,7 @@ void main()
 
     auto row = matrix[2];
     row[3] = 6;
-    // D & C index order
+    // D & C ترتيب مسار
     assert(matrix[2, 3] == 6);
 
     matrix.byDim!0.each!writeln;
