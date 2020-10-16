@@ -1,6 +1,6 @@
 # EMSI Containers
 
-Play with [emsi_containers](https://github.com/dlang-community/containers)
+[emsi_containers](https://github.com/dlang-community/containers) جرب  
 
 ## {SourceCode:incomplete}
 
