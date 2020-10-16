@@ -1,15 +1,14 @@
 # Pegged
 
-Pegged is a parsing expression grammar (PEG) generator.
+.(PEG) مولد قواعد لمفسر تعبيرات 
 
-The idea is to give the generator a PEG.
-From this grammar definition a set of related parsers will be created,
-to be used at runtime or compile time.
+.الفكرة هي إعطاء المولد قواعد مفسر تعبيرات
+.و من القواعد المحددة مجموعة من التفسيرات المتعلقة سيتم إنشائها, لتستخدم في وقت التشغيل أو وقت الترجمة
 
-## See Also
+## اقرأ أيضاً
 
-- [Pegged on GitHub](https://github.com/PhilippeSigaud/Pegged)
-- [Reference article for Pegged's syntax](http://bford.info/pub/lang/peg)
+- [GitHub على Pegged](https://github.com/PhilippeSigaud/Pegged)
+- [Pegged مقالة مرجعية لتركيب](http://bford.info/pub/lang/peg)
 
 ## {SourceCode:fullWidth:incomplete}
 
@@ -39,7 +38,7 @@ Arithmetic:
 
 void main()
 {
-    // Parsing at compile-time:
+    // التفسير في وقت الترجمة
     enum parseTree1 = Arithmetic("1 + 2 - (3*x-5)*6");
 
     pragma(msg, parseTree1.matches);
@@ -47,7 +46,7 @@ void main()
        "(", "3", "*", "x", "-", "5", ")", "*", "6"]);
     writeln(parseTree1);
 
-    // And at runtime too:
+    // و في وقت التشغيل أيضاً
     auto parseTree2 = Arithmetic(" 0 + 123 - 456 ");
     assert(parseTree2.matches == ["0", "+", "123", "-", "456"]);
 }
