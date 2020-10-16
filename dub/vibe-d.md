@@ -1,6 +1,6 @@
 # Vibe-d
 
-Play with [vibe.d](http://vibed.org).
+.[vibe.d](http://vibed.org) جرب
 
 ## {SourceCode:fullWidth:incomplete}
 
