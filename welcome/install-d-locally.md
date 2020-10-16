@@ -1,32 +1,27 @@
-# Install D locally
+# في الجهاز بشكل داخلي D تنصيب لغة
 
-The D language reference compiler is called DMD (Digital Mars D).
-Also available are [LDC](https://github.com/ldc-developers/ldc)
-(a [LLVM](http://llvm.org)-based D compiler).
-and [GDC](https://gdcproject.org) (a [GCC](https://gcc.gnu.org/)-based D
-compiler).
-See [the Compilers wiki page](https://wiki.dlang.org/Compilers) for
-more detailed information, but if you're new to D and aren't sure
-which to install, install DMD.
+.(Digital Mars D) DMD الرئيسي بمترجم D يسمى مترجم لغة 
 
-## Download and Install
+.([GCC](https://gcc.gnu.org/) مترجم مبني على) [GDC](https://gdcproject.org) و (LLVM مترجم مبني على) [LDC](https://github.com/ldc-developers/ldc) هناك خيارات اخرى متاحة مثل
 
-The [D downloads page](https://dlang.org/download.html) provides an
-overview of the various D implementations, and contains links to
-pre-built OS-specific DMD packages ready to download and install.
+.DMD و لم تكن متأكد من ما تريد تنصيبه, نصب مترجم D ألقي نظرة على [الويكي الخاص بالمترجمات](https://wiki.dlang.org/Compilers) للمزيد من التفاصيل, لكن إن كنت جديداً على   
 
-As an alternative to the OS-specific packages, there's also an
-[install script](https://dlang.org/install.html)
-for use with any Posix-like System (Linux, FreeBSD, MacOS)
-that can install the various implementations (including multiple versions of them)
-locally without requiring any administration rights.
-See the [install script documentation](https://dlang.org/install.html) for details.
+## التنزيل و التنصيب
 
-## Configure your editor
+.مخصصة لأنظمة تشغيل مبنية مسبقا جاهزة للتحميل و التنصيب DMD توفر نظرة للعديد من تنفيذات اللغة و تحوي روابط لحزم [D صفحة تنزيلات](https://dlang.org/download.html) 
 
-The beauty about D is that you don't need a fancy IDE as boilerplate code is very rare.
-However, using D is nicer when you are in the comfortable zone of your favorite editor.
-There are D plugins for at least the following editors:
+
+,Linux و FreeBSD و MacOS مثل Posix بديلاً عن الحزم, يتوفر [سكربت تنصيب](https://dlang.org/install.html) للأنظمة المبنية على
+
+.حيث تمكن من تنصيب عدة تنفيذات بما فيها إصداراتهم المختلفة دون حاجة لإذن من مشرف النظام
+
+.ألقي نظرة على [مستند سكربت التنصيب](https://dlang.org/install.html) للمزيد من التفاصيل
+
+## إعداد محررك
+
+.هو أنه لست بحاجة لبيئة تطوير متكاملة بما أن الشيفرات النمطية أمر نادر جداً D الجميل بخصوص  
+
+:على الأفل للمحررات التالية D يكون أجمل عندما تكون في البيئة المريحة لمحررك المفضل, هنالك العديد من إضافات D على أية حال, استخدام لغة
 
 - [Atom](https://github.com/Pure-D/atomize-d)
 - [Eclipse](http://ddt-ide.github.io)
@@ -37,8 +32,8 @@ There are D plugins for at least the following editors:
 - [VS Code](https://marketplace.visualstudio.com/items/webfreak.code-d)
 - [__Visual Studio__](http://rainers.github.io/visuald/visuald/StartPage.html)
 
-You may also want to try an IDE dedicated to D:
+:D ربما أيضاً قد ترغب بتجربة بيئة تطوير متكاملة مخصصة للغة
 
 - [Dlang IDE](https://github.com/buggins/dlangide)
 
-The D wiki contains a more detailed overview of available [editors](https://wiki.dlang.org/Editors) and [IDEs](https://wiki.dlang.org/IDEs).
+.يحوي نظرة للكثير من التفاصيل حول [المحررات](https://wiki.dlang.org/Editors) و [بيئات التطوير المتكاملة](https://wiki.dlang.org/IDEs) المتوفرة D الويكي الخاص للغة 
