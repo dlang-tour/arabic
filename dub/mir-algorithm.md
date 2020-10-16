@@ -1,14 +1,14 @@
-# Mir Algorithm
+# Mir خوارزمية
 
-Dlang Core Library and a home for multidimensional array package - ndslice.
+.ndslice - مكتبة داخلية و مكان لحزمة المصفوفات متعددة الأبعاد
 
 ## Links
 
- - [API Documentation](http://mir-algorithm.libmir.org)
+ - [مستند الواجهة البرمجية](http://mir-algorithm.libmir.org)
  - [GitHub](https://github.com/libmir/mir-algorithm)
- - [Lubeck](https://github.com/kaleidicassociates/lubeck) - Linear Algebra Library based on NDSlice API.
+ - [Lubeck](https://github.com/kaleidicassociates/lubeck) - NDSliceمكتبة جبر خطية مبنية على الواجهة البرمجية ل.
 
-## See Also
+## اقرأ أيضاً
 
 [Magic Square on Wikipedia](https://en.wikipedia.org/wiki/Magic_square).
 
