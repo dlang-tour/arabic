@@ -1,19 +1,19 @@
 # Mir
 
-The package includes:
+:هذه الحزمة تتضمن
 
- - [mir-algorithm package](dub/mir-algorithm). Dlang core library for math, finance and a home for Dlang multidimensional array package - ndslice.
- - [mir-random package](dub/mir-random). Advanced random number generators.
+ - [mir-algorithm package](dub/mir-algorithm). ndslice - داخلية للرياضيات, الصرافة و مكان لحزمة المصفوفات متعددة الأبعاد D مكتبة.
+ - [mir-random package](dub/mir-random). إنشاء أرقام عشوائية متقدم
  - Sparse tensors
  - Hoffman
 
-## Links
+## الروابط
 
- - [Mir Algorithm API](http://mir-algorithm.libmir.org)
- - [Mir Random API](http://mir-random.libmir.org)
- - [Mir API](http://mir.libmir.org)
+ - [Mir الواجهة البرمجية لخوارزمية](http://mir-algorithm.libmir.org)
+ - [Mir الواجهة البرمجية لعشوائية](http://mir-random.libmir.org)
+ - [Mirالواجهة البرمجية ل](http://mir.libmir.org)
  - [GitHub](https://github.com/libmir/mir)
- - [Lubeck](https://github.com/kaleidicassociates/lubeck) - Linear Algebra Library based on NDSlice API.
+ - [Lubeck](https://github.com/kaleidicassociates/lubeck) - NDSliceمكتبة جبر خطية مبنية على الواجهة البرمجية ل.
 
 ## {SourceCode}
 
@@ -26,7 +26,7 @@ import std.stdio: writeln;
 
 void main()
 {
-    // DOK format
+    // DOK صيغة
     auto sl = sparse!double(5, 8);
     sl[] =
         [[0, 2, 0, 0, 0, 0, 0, 1],
@@ -35,7 +35,7 @@ void main()
          [6, 0, 0, 0, 0, 0, 0, 9],
          [0, 0, 0, 0, 0, 0, 0, 5]];
 
-    // CRS/CSR format
+    // CRS/CSR صيغة
     auto crs = sl.compress;
     writeln(crs);
 }
