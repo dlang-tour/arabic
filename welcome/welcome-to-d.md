@@ -1,52 +1,47 @@
-# Welcome to D
+# D أهلاً بك إلى
 
-Welcome to the interactive tour of the *D Programming language*.
+.D أهلاً بك إلى الدورة التفاعلية للغة البرمجة
 
 {{#dmanmobile}}
 
-The tour gives an overview of this __powerful__ and __expressive__
-language which compiles directly to __efficient__, __native__ machine code.
+.الدورة تعطي نظرة حول هذه اللغة __القوية__ و __المعبرة__ التي تترجم لكود ألة __فعال__ و أصلي
 
 {{/dmanmobile}}
 
-### What is D?
+### ؟D ما هي
 
-D is the culmination of _decades of experience implementing compilers_
-for many diverse languages and has a unique set of features:
+:هي أوج _عقود من تجربة تنفيذ المترجمات_ للعديد من اللغات المتنوعة و لديها مجموعة من المزايا الفريدة D لغة 
 
 {{#dmandesktop}}
 
-- _high level_ constructs for great modeling power
-- _high performance_, compiled language
-- static typing
-- direct interface to the operating system API's and hardware
-- blazingly fast compile-times
-- memory-safe subset (SafeD)
-- _maintainable_, _easy to understand_ code
-- gradual learning curve (C-like syntax, similar to Java and others)
-- compatible with C application binary interface
-- limited compatibility with C++ application binary interface
-- multi-paradigm (imperative, structured, object oriented, generic, functional programming purity, and even assembly)
-- built-in error detection (contracts, unittests)
+- مشيدات __عالية المستوى__ لقوة نمذجة كبيرة
+- لغة مترجمة عالية الأداء
+- كتابة ثابتة
+- واجهة مباشرة لواجهة نظام التشغيل البرمجة و قطع الحاسوب المادية
+- وقت ترجمة سريع للغاية
+- (SafeD) فرعية امنة للذاكرة
+- _قابل للصيانة_ (للتحكم) و كود _سهل الإستيعاب_
+- (و اللغات الأخرى Javaمشابه ل ,C منحنى تعليمي متدرج (تركيب مشابه للغة
+- البرمجية C متوافق مع واجهة تطبيقات
+- البرمجية C++ توافق محدود مع واجهة تطبيقات
+- نماذج متعددة (أمرية, نموذجية, كائنية التوجه, عامة, برمجة نقية تابعية, و حتى التجميع أي تجميعية)
+- كشف أخطاء مبني (العقود, الإختبارات الوحدية)
 
-... and many more [features](http://dlang.org/overview.html).
+...و العديد من [المزايا](http://dlang.org/overview.html)
 
 {{/dmandesktop}}
 
-### About the tour
+### حول الدورة
 
-Each section comes with a source code example that can be modified and used
-to experiment with D's language features.
-Click the run button (or `Ctrl-enter`) to compile and run it.
+.D كل قسم يأتي مع مثال شيفرة مصدرية يمكن تعديله و استخدامه لتجربة مزايا لغة
 
-To navigate this tour, either use the "`<` previous" and "next `>`" links at the
-bottom (or left and right arrow keys), or else go straight to particular sections
-using the menus at the top.
+.لترجمة الشيفرة المصدرية و تشغيلها (`Ctrl-enter` اضغط زر التشغيل (أو 
 
-### Contributing
+للتوجه خلال هذه الدورة, استخدم روابط رموز السهمين المتجه لليمين للتنقل للتالي و لليسار للوراء في أسفل الصفحة أو إذهب لأقسام محددة بإستخدام القوائم الموجودة في رأس الصفحة
 
-This tour is [open source](https://github.com/dlang-tour)
-and we welcome pull requests making this tour even better.
+### التطوع
+
+.pull requests هذه الدورة [مفتوحة المصدر](https://github.com/dlang-tour) و نحن نرحب بجعلها أفضل عن طريق
 
 ## {SourceCode}
 
@@ -57,19 +52,17 @@ import std.range;
 
 void main()
 {
-    // Let's get going!
+    // لنبدأ
     writeln("Hello World!");
 
-    // An example for experienced programmers:
-    // Take three arrays, and without allocating
-    // any new memory, sort across all the
-    // arrays inplace
+    // هذا مثال للمبرمجين الذين لديهم خبرة
+    // نأخذ 3 مصفوفات دون حاجة لوضعهم في الذاكرة و ترتيبهم في أمكنة المصفوفات
     int[] arr1 = [4, 9, 7];
     int[] arr2 = [5, 2, 1, 10];
     int[] arr3 = [6, 8, 3];
     sort(chain(arr1, arr2, arr3));
     writefln("%s\n%s\n%s\n", arr1, arr2, arr3);
-    // To learn more about this example, see the
-    // "Range algorithms" page under "Gems"
+    // أو ما يسمى بخوارزميات المدى "Range algorithms" لمعرفة المزيد من المعلومات حول هذا المثال, ألقي نظرة على صفحة 
+    // "Gems" في قسم
 }
 ```
