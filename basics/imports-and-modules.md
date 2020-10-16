@@ -1,51 +1,50 @@
-# Imports and modules
+# الواردات و الوحدات
 
 {{#img-right}}turtle.svg{{/img-right}}
 
-One of D's core design decision was to be consistent and avoid corner cases
-in the language.
-This is called [_turtles all the way down_](https://en.wikipedia.org/wiki/Turtles_all_the_way_down).
-One good example for this consistency are `import`s.
+.الداخلي هي أن تكون لغة ثابتة و تتفادى الحالات الإحتكارية في اللغة D أحد خيارات تصميم
 
-## Imports
+.هذا ما يسمى ب[جميع السلاحف تذهب للأسفل](https://en.wikipedia.org/wiki/Turtles_all_the_way_down)
 
-For a simple hello world program in D, `import`s are needed.
-The `import` statement makes all public functions
-and types from the given **module** available.
+.أو ما يسمى بالواردات `import` أحد الأمثلة الجيدة التي تدل على الثابتية هي ال
 
-### The turtles start falling down
+## الواحدات
 
-An `import` statement __does not__ need to appear at the top of a source file.
-It can also be used locally within functions or any other scope.
-In the following chapters you will see that this applies to almost all concepts in D. The language doesn't impose arbitrary restrictions on you.
+.بسيط (برنامج أهلاً بالعالم), الواردات أمر أساسي hello world لبرنامج 
 
-### Selective imports
+.تجعل كل التوابع العامة و أنواع المعطيات من **الوحدة** المعطاة متاحة `import` تعليمة 
 
-The standard library, called [Phobos](https://dlang.org/phobos/),
-is located under the **package** `std`
-and its modules are referenced through `import std.MODULE`.
+### السلاحف تبدأ بالسقوط للأسفل
 
-The `import` statement can also be used to selectively
-import certain symbols of a module:
+.لا تحتاج لأن تظهر في رأس كود المصدر `import` تعليمة
+
+.حيث أنه أيضاً يمكن استخدامها داخلياً في التوابع أو في أي نطاق اخر
+
+.اللغة لن تفرض قيوداً استبدادية عليك .D في الفصول التالية سترى أن هذا ينطبق على أغلب جميع المفاهيم في لغة
+
+### الواردات الإختيارية
+
+.`import std.MODULE` و وحداتها تعرف من خلال ,`std` موجودة تحت الحزمة ,[Phobos](https://dlang.org/phobos/)المكتبة الرئيسية و المسماة ب 
+
+:اختيارياً لتوريد توابع من وحدة ما `import` أيضاً يمكن استخدام تعليمة
 
     import std.stdio : writeln, writefln;
 
-Selective imports can be used to improve readability by making
-it obvious where a symbol comes from, and also as a way to
-prevent clashing of symbols with the same name from different modules.
+الواردات الإختيارية يمكن أن تستخدم لتحسين قابلية قرائة الكود من خلال توضيح مكان التابع المستخدم و هي أيضاً طريقة لمنع النزاع بين التوابع التي تحمل نفس الإسم من وحدات مختلفة
 
-### Imports match directories and files
+### الواردات تماثل المجلدات و الملفات
 
-D's module system — in contrast to other systems — is entirely based on files.
-For example, `my.cat` always refers to a file `cat.d` in the folder `my/`.
-The folder `my` needs to be in the current working directory or
-in one of the explicitly specified directory imports (`-I`).
-Lastly, to ease splitting big modules up into multiple smaller files,
-instead of `cat.d`, a folder `cat/` could be used as well.
-The D compiler would then try to load `my/cat/package.d` instead of `my/cat.d`.
+.بالتباين للأنظمة الأخرى, هو نظام مبني على الملفات ,D نظام وحدات
 
-The convention (but not a hard rule) for `package.d` files is to publicly import
-all other modules in the same folder.
+.`my/` في المجلد `cat.d` دائماً تشير لملف يسمى ب `my.cat` على سبيل المثال, وحدة
+
+.(`-I`) يحتاج لأن يكون في المسار الحالي أو في أحد المسارات المحدد و المصرح عنها بواسطة `my` المجلد
+
+.يفي بالغرض `cat/` استخدام مجلد ,`cat.d` أخيراً, لتسهيل تقسيم الوحدات الكبيرة لملفات أصغر, بدلاً من
+
+.`my/cat.d` بدلاً من `my/cat/package.d` سيحاول تحميل D مترجم 
+
+.هي أنه بشكل عام يتم توريد الوحدات الأخرى في نفس المجلد `package.d` الميثاق (و لكن ليست قاعدة صعبة) في ملفات
 
 ## {SourceCode}
 
@@ -53,7 +52,7 @@ all other modules in the same folder.
 void main()
 {
     import std.stdio;
-    // or import std.stdio : writeln;
+    // import std.stdio : writeln; أو
     writeln("Hello, World!");
 }
 ```
