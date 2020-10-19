@@ -1,11 +1,10 @@
-# Loops
+# الحلقات التكرارية
 
-D provides four loop constructs.
+.أربع أنواع للحلقات التكرارية D توفر
 
 ### 1) `while`
 
-`while`  loops execute the given code block
-while a certain condition is met:
+:تنفذ الكود المعطى داخل الحلقة طالما يتم تحقق شرط `while` حلقات
 
     while (condition)
     {
@@ -14,20 +13,16 @@ while a certain condition is met:
 
 ### 2) `do ... while`
 
-The `do .. while` loops execute the given code block
-while a certain condition is met, but in contrast to `while`
-the _loop block_ is executed before the loop condition is
-evaluated for the first time.
+.تنفذ الكود المعطى داخل الحلقة طالما يتم تحقق شرط لكن الفرق عن السابقة أنها تنفذ الكود لمرة واحدة قبل التحقق من الشرط `do ... while` حلقة
 
     do
     {
         foo();
     } while (condition);
 
-### 3) Classical `for` loop
+### 3) الكلاسيكية `for` حلقة
 
-The classical `for` loop known from C/C++ or Java
-with _initializer_, _loop condition_ and _loop statement_:
+:مع _بداية_ و _شرط_ و _تعليمة_ التكرار Java و C/C++ و هي الحلقة المتعارف عليها من
 
     for (int i = 0; i < arr.length; i++)
     {
@@ -35,18 +30,18 @@ with _initializer_, _loop condition_ and _loop statement_:
 
 ### 4) `foreach`
 
-The [`foreach` loop](basics/foreach) which will be introduced in more detail
-in the next section:
+:سيشرح عنها بتفصيل أكبر في القسم القادم [`foreach` حلقة](basics/foreach) 
 
     foreach (el; arr)
     {
         ...
     }
 
-#### Special keywords and labels
+#### الكلمات الخاصة و العناوين
 
-The special keyword `break` will immediately abort the current loop.
-In a nested loop a _label_ can be used to break out of any outer loop:
+.مباشرةً سوف توقف حلقة التكرار الحالية `break` الكلمة الخاصة
+
+:في حلقة تكرار متداخلة يمكن استخدام _عنوان_ للخروج عن أي حلقة تكرارية خارجية
 
     outer: for (int i = 0; i < 10; ++i)
     {
@@ -55,9 +50,9 @@ In a nested loop a _label_ can be used to break out of any outer loop:
             ...
             break outer;
 
-The keyword `continue` starts with the next loop iteration.
+.تبدأ بالتكرار التالي للحلقة `continue` الكلمة المفتاحية
 
-### In-depth
+### للتعمق
 
 - `for` loop in [_Programming in D_](http://ddili.org/ders/d.en/for.html), [specification](https://dlang.org/spec/statement.html#ForStatement)
 - `while` loop in [_Programming in D_](http://ddili.org/ders/d.en/while.html), [specification](https://dlang.org/spec/statement.html#WhileStatement)
@@ -69,8 +64,7 @@ The keyword `continue` starts with the next loop iteration.
 import std.stdio : writeln;
 
 /*
-Computes the average of
-the elements of an array.
+.يحسب المتوسط الحسابي للعناصر ضمن مصفوفة
 */
 double average(int[] array)
 {
@@ -78,8 +72,8 @@ double average(int[] array)
     double accumulator = 0.0;
     while (array.length)
     {
-        // this could be also done with .front
-        // with import std.array : front;
+        // .front هذا يمكن أن يتم بواسطة
+        // import std.array : front; بواسطة
         accumulator += array[0];
         array = array[1 .. $];
     }
